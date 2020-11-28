@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace UnityStandardAssets.ImageEffects
 {
-    [CustomEditor (typeof(SunShafts))]
+    //[CustomEditor (typeof(SunShafts))]
     class SunShaftsEditor : Editor
     {
         SerializedObject serObj;
