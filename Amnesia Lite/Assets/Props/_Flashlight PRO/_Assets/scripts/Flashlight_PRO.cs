@@ -18,14 +18,6 @@ public class Flashlight_PRO : MonoBehaviour
 	private Color ambient_mat_color;
 	private bool is_enabled = false;
 
-
-
-
-
-
-
-
-
 	// Use this for initialization
 	void Start () 
 	{
@@ -34,41 +26,30 @@ public class Flashlight_PRO : MonoBehaviour
 		ambient_light_material = Lights.transform.Find ("ambient").GetComponent<Renderer> ().material;
 		ambient_mat_color = ambient_light_material.GetColor ("_TintColor");
 	}
-	
+
+    private void Update()
+    {
+		Switch();
+    }
 
 
 
 
-
-	/// <summary>
-	/// changes the intensivity of lights from 0 to 100.
-	/// call this from other scripts.
-	/// </summary>
-	public void Change_Intensivity(float percentage)
+    /// <summary>
+    /// switch current state  ON / OFF.
+    /// call this from other scripts.
+    /// </summary>
+    public void Switch()
 	{
-		percentage = Mathf.Clamp (percentage, 0, 100);
+		if(Input.GetKey("f"))
+        {
+			is_enabled = !is_enabled;
 
+			Lights.SetActive(is_enabled);
 
-		spotlight.intensity = (8 * percentage) / 100;
-
-		ambient_light_material.SetColor ("_TintColor", new Color(ambient_mat_color.r , ambient_mat_color.g , ambient_mat_color.b , percentage/2000)); 
-	}
-
-
-
-
-	/// <summary>
-	/// switch current state  ON / OFF.
-	/// call this from other scripts.
-	/// </summary>
-	public void Switch()
-	{
-		is_enabled = !is_enabled; 
-
-		Lights.SetActive (is_enabled);
-
-		if (switch_sound != null)
-			switch_sound.Play ();
+			if (switch_sound != null)
+				switch_sound.Play();
+		}
 	}
 
 
@@ -80,7 +61,7 @@ public class Flashlight_PRO : MonoBehaviour
 	/// </summary>
 	public void Enable_Particles(bool value)
 	{
-		if(dust_particles != null)
+		if(dust_particles != null && is_enabled)
 		{
 			if(value)
 			{
