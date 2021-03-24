@@ -8814,8 +8814,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 647307685}
   m_LocalRotation: {x: 0, y: 0, z: -0.7467542, w: 0.6651001}
-  m_LocalPosition: {x: -2, y: -0.7, z: 1.86}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+  m_LocalPosition: {x: -1.03, y: -0.35, z: 0.92}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 692934493}
   m_RootOrder: 1
@@ -21208,8 +21208,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3ae8f920c356c94d9db5ed434777ea2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_crosshairTexture: {fileID: 2800000, guid: 529239097d02f9f42b0ddd436c6fcbb0, type: 3}
-  m_useTexture: {fileID: 2800000, guid: fc00ec05a89da4ff695a4273715cd5ce, type: 3}
+  m_crosshairTexture: {fileID: 2800000, guid: 6f23d4f8861a8454f913bcf0c7d822b0, type: 3}
+  m_useTexture: {fileID: 2800000, guid: 28422343308c34443b21b45eecb07c75, type: 3}
   RayLength: 3
   m_DefaultReticle: 1
   m_UseReticle: 0
@@ -24980,6 +24980,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!65 &1752773587
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1752773585}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1752773588
 MonoBehaviour:
   m_ObjectHideFlags: 0

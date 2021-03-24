@@ -31,5 +31,10 @@ public class Radio : MonoBehaviour
             radio.Play();
             RadioPlay = true;
         }
+        else
+        {
+            radio.Stop();
+            RadioPlay = false;
+        }
     }
 }
