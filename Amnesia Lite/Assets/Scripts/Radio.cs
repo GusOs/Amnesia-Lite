@@ -9,7 +9,7 @@ public class Radio : MonoBehaviour
 
     public AudioSource radio;
 
-    private bool RadioPlay;
+    private bool RadioPlay = true;
 
     // Start is called before the first frame update
     void Start()
@@ -28,13 +28,7 @@ public class Radio : MonoBehaviour
     {
         if(radioCollision.CompareTag("Player"))
         {
-            radio.Play();
-            RadioPlay = true;
-        }
-        else
-        {
             radio.Stop();
-            RadioPlay = false;
         }
     }
 }
