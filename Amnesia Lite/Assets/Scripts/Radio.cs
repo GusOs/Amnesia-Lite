@@ -9,7 +9,7 @@ public class Radio : MonoBehaviour
 
     public AudioSource radio;
 
-    private bool RadioPlay = true;
+    private bool RadioPlay = false;
 
     // Start is called before the first frame update
     void Start()
@@ -26,9 +26,15 @@ public class Radio : MonoBehaviour
     // Play if catch object in scene
     private void OnTriggerEnter(Collider radioCollision)
     {
-        if(radioCollision.CompareTag("Player"))
+        if(radioCollision.CompareTag("Player") && Input.GetKey(KeyCode.E) && RadioPlay == false)
+        {
+            radio.Play();
+            RadioPlay = true;
+        }
+        else
         {
             radio.Stop();
+            RadioPlay = false;
         }
     }
 }
