@@ -16598,6 +16598,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flashlight
       objectReference: {fileID: 0}
+    - target: {fileID: 161630, guid: 47af58fd905aee649a315f604914d38e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 416254, guid: 47af58fd905aee649a315f604914d38e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.35399994
@@ -30568,7 +30572,7 @@ PrefabInstance:
     - target: {fileID: 166165822695332750, guid: ca4670a02cdca024ab96b51d764f5788,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.96
+      value: -13.82
       objectReference: {fileID: 0}
     - target: {fileID: 166165822695332750, guid: ca4670a02cdca024ab96b51d764f5788,
         type: 3}
@@ -30578,7 +30582,7 @@ PrefabInstance:
     - target: {fileID: 166165822695332750, guid: ca4670a02cdca024ab96b51d764f5788,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.08
+      value: -6.064
       objectReference: {fileID: 0}
     - target: {fileID: 166165822695332750, guid: ca4670a02cdca024ab96b51d764f5788,
         type: 3}
